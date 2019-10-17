@@ -6,7 +6,10 @@ RewriteEngine On
 #  Cual es la base de la aplicación en el servidor, depende de como este estructurada la carpeta 
 #  Los accesos seran : http://localhost/tutoriales/mexflix/usuarios, estatus, users, 
 
-RewriteBase /Tutoriales/Servinext
+RewriteBase /servinext
+# Esta ocacion la ruta es : /var/www/html/servinext, solo se coloca donde inicia la carpeta
+
+# RewriteBase /Tutoriales/Servinext , la carpeta anterior donde estaba instalado, /home/soporte/Tutoriales/Servinext
 
 # Son condicionales en .htaccess, validando que la carpeta y archivos que se consulte 
 RewriteCond %{SCRIPT_FILENAME} !-d
