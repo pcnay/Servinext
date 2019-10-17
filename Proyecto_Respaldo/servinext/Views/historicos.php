@@ -1,1 +1,0 @@
-<h2>Capturas de Historicos</h2>
