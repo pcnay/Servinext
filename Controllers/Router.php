@@ -115,6 +115,12 @@
 						else if($_POST['r'] == 'equipos-delete')
 							$controller->load_view('equipos-delete');										
 					break;
+					case 'inventario':
+					// Viene desde equipos.php
+						if (!isset($_POST['r']))
+							$controller->load_view('inventario');
+							
+					break;
 
 					case 'historicos':
 						$controller->load_view('historicos');

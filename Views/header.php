@@ -33,6 +33,7 @@
 							<li class="nobullet item inline"><a href="modelos">Modelos</a></li>
 							<li class="nobullet item inline"><a href="tc">tipocomponente</a></li>
 							<li class="nobullet item inline"><a href="equipos">Equipos</a></li>
+							<li class="nobullet item inline"><a href="inventario">Inventario</a></li>
 							<li class="nobullet item inline"><a href="historicos">Historicos de Equipos</a></li>
 							<li class="nobullet item inline"><a href="salir">Salir</a></li>
 

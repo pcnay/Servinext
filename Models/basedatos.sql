@@ -143,6 +143,22 @@ CREATE TABLE t_Historico_epo
     
 );
 
+CREATE TABLE t_Refaccion
+(
+  id_refaccion INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  descripcion VARCHAR(80) NOT NULL,
+  num_parte VARCHAR(45) NOT NULL,
+  existencia tinyint DEFAULT 1,
+  fecha DATE NOT NULL,
+  id_marca INTEGER UNSIGNED NOT NULL,
+  id_modelo INTEGER UNSIGNED NOT NULL,
+  observaciones TEXT NULL,
+  FOREIGN KEY(id_marca) REFERENCES t_Marca(id_marca)
+    ON DELETE RESTRICT ON UPDATE CASCADE,
+  FOREIGN KEY(id_modelo) REFERENCES t_Modelo(id_modelo)
+    ON DELETE RESTRICT ON UPDATE CASCADE    
+);
+
 /* Precargando los datos */
 INSERT INTO t_Marca (id_marca,descripcion) VALUES
   (1,'HewllwtPackard'),
@@ -184,3 +200,8 @@ INSERT INTO t_Historico_epo (id_Historico_epo,notas,id_modelo,id_marca,id_client
 INSERT INTO t_Usuarios (usuario,email,nombre,cumpleanos,clave,perfil) VALUES
   ('@admin','admin@gmail.com','Administrador','1980-10-10',MD5('1234'),'Admin'),
   ('@usuario','usuario@gmail.com','Usuario','1990-11-11',MD5('4321'),'User');
+
+INSERT INTO t_Refaccion (id_refaccion,descripcion,num_parte,existencia,fecha,id_marca,id_modelo,observaciones) VALUES
+  (1,'Panel Board Control','40X9245',1,'2019-10-10',1,1,'Caja doblada'),
+	(2,'Print Head','40X7597',2,'2019-10-09',1,1,''),
+	(3,'Jam Access Cover','40X8279',1,'2019-10-08',1,1,'La parte esta en Almacen ');
