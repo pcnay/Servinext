@@ -36,6 +36,7 @@
 
 			// Se utiliza comillas, porque se utilizaran las comillas.
 			$this->query= "REPLACE INTO t_Refaccion (id_refaccion,descripcion,num_parte,existencia,fecha,id_marca,id_modelo,observaciones) VALUES ($id_refaccion,'$descripcion','$num_parte',$existencia,'$fecha',$id_marca,$id_modelo,'$observaciones')";
+			
 			// Insertando el valor nuevo.
 			$this->set_query(); 
 		}

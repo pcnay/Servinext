@@ -38,7 +38,7 @@ if ($_POST['r']== 'inventarios-add' && $_SESSION['perfil'] == 'Admin' && !isset(
         <input type = "number" name="existencia" placeholder="Existencia" required>
       </div>
       <div class="p_25">
-        <input type = "text" name="fecha" placeholder="Fecha De Captura">
+        <input type = "text" name="fecha" placeholder="Fecha De Captura : AAAA-MM-DD">
       </div>
 
       <div class="p_25">
@@ -76,6 +76,7 @@ else if ($_POST['r']== 'inventarios-add' && $_SESSION['perfil'] == 'Admin' && $_
     'descripcion' => $_POST['descripcion'],
     'num_parte' => $_POST['num_parte'],
     'existencia' => $_POST['existencia'],
+    'fecha' => $_POST['fecha'],
     'id_marca' => $_POST['id_marca'],
     'id_modelo' => $_POST['id_modelo'],
     'observaciones' => $_POST['observaciones']
@@ -105,24 +106,3 @@ else
   $controller->load_view('error401'); // Error401 = Error de que no se tiene permiso para accesar.
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

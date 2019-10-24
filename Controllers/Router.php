@@ -119,6 +119,10 @@
 					// Viene desde equipos.php
 						if (!isset($_POST['r']))
 							$controller->load_view('inventario');
+							else if($_POST['r'] == 'inventarios-add')
+							$controller->load_view('inventarios-add');						
+							else if($_POST['r'] == 'inventarios-edit')
+							$controller->load_view('inventarios-edit');						
 							
 					break;
 
