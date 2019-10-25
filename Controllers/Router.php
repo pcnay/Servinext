@@ -123,6 +123,8 @@
 							$controller->load_view('inventarios-add');						
 							else if($_POST['r'] == 'inventarios-edit')
 							$controller->load_view('inventarios-edit');						
+							else if($_POST['r'] == 'inventarios-delete')
+							$controller->load_view('inventarios-delete');						
 							
 					break;
 
