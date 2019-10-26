@@ -40,13 +40,21 @@
             <th>Marca</th>
             <th>Modelo</th>
             <th>Observaciones</th>
-            <th colspan="2">
+            <th > <!-- <th colspan="2"> -->
               <!-- Para manipular las rutas de la aplicación, cuando se oprime el boton de "Enviar" el Router.php lee el valor de la variable global $_POST, forma parte del Table Header -->
               <form method="POST">
                 <input type="hidden" name="r" value="inventarios-add">
                 <input class="button add" type = "submit" value="Agregar">      
-              </form>              
+              </form>                            
             </th>
+            <th>
+            <!-- Boton Imprimir -->
+            <form method="POST" > <!-- action ="./Reportes/reportes-marcas.php"> -->
+              <input type="hidden" name="r" value="reportes-inventarios">
+              <input class="button imprimir" type = "submit" value="Imprimir">      
+            </form>              
+            </th>
+
           </tr>
           <!-- Se generan las filas de forma dinámica.-->';
     for ($n=0;$n<count($inventario);$n++)

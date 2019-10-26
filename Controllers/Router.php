@@ -125,6 +125,8 @@
 							$controller->load_view('inventarios-edit');						
 							else if($_POST['r'] == 'inventarios-delete')
 							$controller->load_view('inventarios-delete');						
+							else if($_POST['r'] == 'reportes-inventarios')
+							$controller->load_view('reportes-inventarios');
 							
 					break;
 
