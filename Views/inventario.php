@@ -29,7 +29,9 @@
   else
   {
     $template_inventario = '
-      <div class="item">
+      <label for="caja_busqueda">Buscar</label>
+      <input type="text" name="caja_busqueda" id="caja_busqueda" placeholder = "Texto a Buscar"></input>
+      <div class="item lista">
         <table>
           <tr>
             <th>Id</th>
@@ -91,6 +93,7 @@
       </div>    
     ';
     print($template_inventario);
+
   }
 
 ?>
